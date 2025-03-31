@@ -1,80 +1,141 @@
 <template>
-  <div>
-    <h2 class="text-xl font-bold mb-4">Search Results</h2>
-    <table class="min-w-full border border-gray-300 text-sm">
-      <thead class="bg-gray-100">
+  <div class="search-container">
+    <h2 class="heading">📅 Daily Search History</h2>
+
+    <div v-if="loading" class="status-text">Loading results...</div>
+    <div v-if="error" class="error-text">❌ Failed to load: {{ error }}</div>
+
+    <table class="results-table" v-if="results.length">
+      <thead>
         <tr>
-          <th class="p-2 border">Search Engine</th>
-          <th class="p-2 border">Search Phrase</th>
-          <th class="p-2 border">URL</th>
-          <th class="p-2 border">Formatted Output</th>
-          <th class="p-2 border">Count</th>
-          <th class="p-2 border">Date</th>
+          <th>Search Engine</th>
+          <th>Search Phrase</th>
+          <th>URL</th>
+          <th>Output</th>
+          <th>Count</th>
+          <th>Date</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(result, index) in results" :key="index">
-          <td class="p-2 border">{{ result.searchEngine }}</td>
-          <td class="p-2 border">{{ result.searchPhrase }}</td>
-          <td class="p-2 border">
-            <a :href="result.url" target="_blank" class="text-blue-600 underline">
-              {{ result.url }}
-            </a>
+        <tr v-for="(entry, index) in results" :key="index">
+          <td>{{ entry.searchEngine }}</td>
+          <td>{{ entry.searchPhrase }}</td>
+          <td>
+            <a :href="entry.url" target="_blank" class="link">{{ entry.url }}</a>
           </td>
-          <td class="p-2 border">{{ result.formattedOutput }}</td>
-          <td class="p-2 border">{{ result.count }}</td>
-          <td class="p-2 border">{{ result.date }}</td>
+          <td class="mono">{{ entry.formattedOutput }}</td>
+          <td>{{ entry.count }}</td>
+          <td>{{ entry.date }}</td>
         </tr>
       </tbody>
     </table>
 
-    <div v-if="loading" class="mt-2 text-gray-600">Loading...</div>
-    <div v-if="error" class="mt-2 text-red-500">Failed to load results: {{ error }}</div>
+    <div v-if="!loading && !results.length" class="status-text">No results found.</div>
   </div>
 </template>
 
 <script>
-export default {
-  name: 'SearchResultsTable',
-  data() {
-    return {
-      results: [],
-      loading: false,
-      error: null
-    }
-  },
-  mounted() {
-    this.fetchResults()
-  },
-  methods: {
-    async fetchResults() {
-      this.loading = true
-      try {
-        const response = await fetch('https://localhost:7197/api/search/DailyHistory', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            phrase : '',
-            engine : '',
-             from : null,
-             to : null
+  export default {
+    name: 'SearchHistoryDaily',
+    data() {
+      return {
+        results: [],
+        loading: false,
+        error: null
+      }
+    },
+    mounted() {
+      this.fetchResults()
+    },
+    methods: {
+      async fetchResults() {
+        this.loading = true
+        try {
+          const response = await fetch('https://localhost:7197/api/search/DailyHistory', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              phrase: '',
+              engine: '',
+              from: null,
+              to: null
+            })
           })
-        });
 
-        if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
-        this.results = await response.json()
-      } catch (err) {
-        this.error = err.message
-      } finally {
-        this.loading = false
+          if (!response.ok) throw new Error(`HTTP ${response.status}`)
+          this.results = await response.json()
+        } catch (err) {
+          this.error = err.message
+        } finally {
+          this.loading = false
+        }
       }
     }
   }
-}
 </script>
 
 <style scoped>
-  table {
+  .search-container {
+    width: 100%;
+    min-height: 800px;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+  }
+
+  .heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+  }
+
+  .status-text {
+    font-size: 1rem;
+    color: #555;
+    margin: 1rem 0;
+  }
+
+  .error-text {
+    color: red;
+    font-weight: 600;
+  }
+
+  .results-table {
+    width: 100%;
     border-collapse: collapse;
+    font-size: 0.95rem;
+    margin-top: 1rem;
+  }
+
+    .results-table th,
+    .results-table td {
+      padding: 0.75rem;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+
+    .results-table th {
+      background-color: #f4f4f4;
+      font-weight: 600;
+    }
+
+  .link {
+    color: #2e86de;
+    text-decoration: underline;
+  }
+
+    .link:hover {
+      color: #2167b6;
+    }
+
+  .mono {
+    font-family: monospace;
+    white-space: pre-wrap;
   }
 </style>
+
