@@ -1,12 +1,12 @@
 ## Notes on Infotech
 
 The front end is a VUE.JS app in options style.
-The back end is a web api with a data layer and a core layer in the clean archtiecture propesed by Microsoft in the eShopOnX series and their architecture guide pdfs.
+The back end is a web api with a data layer and a core layer in the clean arch proposed by Microsoft in the eShopOnX series and their architecture guide pdfs.
 
-I couldn't get the HttpClient to work with GoogleSearch as it kept bringing up the CAPTCHA page.  Hence I had to use Playwrigth.  The user has to solve the captchas in 60s which is about right as some of the google ones are very blurry and repitive to solve. 
+I couldn't get the HttpClient to work with GoogleSearch as it kept bringing up the CAPTCHA page.  Hence I had to use Playwright.  The user has to solve the captchas in 60s which is about right as some of the google ones are very blurry and difficult to solve. 
 But I avoided the use of third party parsing.  
 
-For Bing this only happened the first time so by saving the consent cookies I may be able to use HttpClient but i didnt have time.  I believe the code can be refactored.
+For Bing this only happened the first time so by saving the consent cookies I may be able to use HttpClient but i didn't have time.  I believe the code can be refactored.
 
 I was trying to use composition in a pipeline of steps, e.g. download from page, parse page .  I think this may have got muddled but I would refactor this.
 
@@ -19,7 +19,7 @@ I need clarity on what you mean by a link.  I defined it as an organic search li
 On bing, not sure if I should include the 'main header' link.
 There is a bug where sometimes the bing page is blank.  This is probably to do with the user agent settings but I haven't confirmed.
 
-I wasn't aware Microsoft had removed Swagger in .NET 9 so I lost some time trying to figure out why it had dissappeared.  I readded it, even though I know there is a new tool for openapi but I was unfamiliar with it so I removed it for time.
+
 
 There is already a class by Microsoft called SearchResult hence why I called results SearchResults to avoid name clashes.
 
@@ -27,9 +27,11 @@ I've tried to create a rich domain model layer, but I didn't have time to fully 
 
 ### Installation
 
-use entity migrations. uses the defaul db
+use entity migrations. uses the default db
 
 ![Screenshot 2025-03-31 132432](Screenshot%202025-03-31%20132432.png)
 
-Run in https profile in visual studio.
+Run in https profile in visual studio. with the server project set as startup project.  the client app should load into a command window and you can copy the url into a new chrome window.  if the client doesnt open run 'npm run dev' in the client folder.
+
+![Screenshot 2025-03-31 233122](Screenshot%202025-03-31%20233122.png)
 
