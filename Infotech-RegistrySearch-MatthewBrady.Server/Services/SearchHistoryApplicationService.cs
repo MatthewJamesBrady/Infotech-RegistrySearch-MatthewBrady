@@ -26,7 +26,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                     Url = searchResultl.Url.Url.AbsoluteUri,
                     FormattedOutput = searchResultl.ProduceFormattedOutput(),
                     SearchEngine = searchResultl.SearchEngineUrl,
-                    SearchPhrase = searchResultl.Phrase.Phrase
+                    SearchPhrase = searchResultl.Phrase.Phrase,
+                    Count = searchResultl.Count
                 };
 
                 listOfViewModels.Add(vm);

@@ -9,5 +9,7 @@
         public string Url { get; set; }
 
         public string FormattedOutput { get; set; }
+
+        public int Count { get; set; }
     }
 }
