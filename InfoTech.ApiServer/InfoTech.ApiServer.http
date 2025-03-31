@@ -1,0 +1,6 @@
+@InfoTech.ApiServer_HostAddress = http://localhost:5014
+
+GET {{InfoTech.ApiServer_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

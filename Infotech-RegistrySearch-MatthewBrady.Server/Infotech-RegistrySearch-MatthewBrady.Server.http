@@ -1,0 +1,6 @@
+@Infotech_RegistrySearch_MatthewBrady.Server_HostAddress = http://localhost:5079
+
+GET {{Infotech_RegistrySearch_MatthewBrady.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
