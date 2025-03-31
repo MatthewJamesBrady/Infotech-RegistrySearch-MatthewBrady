@@ -34,7 +34,8 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Google
             var searchResults = new SearchResults
             {
                 Url = query.Url,
-                Phrase = query.Phrase
+                Phrase = query.Phrase,
+                SearchEngineUrl = query.SearchEngine.ToString()
             };
 
             // Find all search result containers

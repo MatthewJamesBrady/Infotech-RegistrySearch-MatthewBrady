@@ -53,20 +53,45 @@ public class SearchResultRepository : ISearchResultRepository
 
     public async Task Upsert(SearchResults searchResult)
     {
-        var existing = _context.SearchResults.FirstOrDefault(sr =>
-            sr.Url == searchResult.Url.Url.AbsoluteUri &&
-            sr.Phrase == searchResult.Phrase.Phrase &&
-            sr.SearchEngineUrl == searchResult.SearchEngineUrl);
-
-        if (existing == null)
+        try
         {
-            await this.AddAsync(searchResult);
+            var existing = await _context.SearchResults.FirstOrDefaultAsync(sr =>
+                sr.Url == searchResult.Url.Url.AbsoluteUri &&
+                sr.Phrase == searchResult.Phrase.Phrase &&
+                sr.SearchEngineUrl == searchResult.SearchEngineUrl);
+
+            if (existing == null)
+            {
+                var entity = _mapper.ToDto(searchResult);
+                _context.SearchResults.Add(entity);
+            }
+            else
+            {
+                var entity = _mapper.ToDto(searchResult);
+                _context.SearchResults.Update(entity);
+            }
+
+            await _context.SaveChangesAsync();
         }
-        else
+        catch (Exception ex)
         {
-            await this.UpdateAsync(searchResult);
+            Console.WriteLine("Upsert error: " + ex.Message);
+            throw;
         }
 
-        _context.SaveChanges();
+
+        //var existing = await _context.SearchResults.FirstOrDefaultAsync(sr =>
+        //    sr.Url == searchResult.Url.Url.AbsoluteUri &&
+        //    sr.Phrase == searchResult.Phrase.Phrase &&
+        //    sr.SearchEngineUrl == searchResult.SearchEngineUrl);
+
+        //if (existing == null)
+        //{
+        //    await this.AddAsync(searchResult);
+        //}
+        //else
+        //{
+        //    await this.UpdateAsync(searchResult);
+        //}
     }
 }

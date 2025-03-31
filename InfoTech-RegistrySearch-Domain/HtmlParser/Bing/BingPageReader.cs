@@ -28,7 +28,8 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
             var searchResults = new SearchResults
             {
                 Url = query.Url,
-                Phrase = query.Phrase
+                Phrase = query.Phrase,
+                SearchEngineUrl = query.SearchEngine.ToString(),
             };
 
             string targetHost = query.Url.Url.Host.Replace("www.", "");

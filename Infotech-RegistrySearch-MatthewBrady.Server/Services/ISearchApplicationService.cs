@@ -6,5 +6,5 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services;
 
 public interface ISearchApplicationService
 {
-    SearchResultViewModel PerformSearch(SearchQueryRequest searchQueryRequest);
+    Task<SearchResultViewModel> PerformSearch(SearchQueryRequest searchQueryRequest);
 }

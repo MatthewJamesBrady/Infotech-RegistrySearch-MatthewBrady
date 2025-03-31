@@ -24,7 +24,17 @@ public class ClientCreator
             WaitUntil = WaitUntilState.NetworkIdle
         }).Result;
 
-        Thread.Sleep(60 * 1000);
+
+        if (searchengine == "bing")
+        {
+            Thread.Sleep(10 * 1000);
+        }
+
+        if (searchengine == "google")
+        {
+            Thread.Sleep(60 * 1000);
+        }
+       
         // Save cookies
         var storage =  context.StorageStateAsync().Result;
         File.WriteAllText("bing_storage.json", storage);

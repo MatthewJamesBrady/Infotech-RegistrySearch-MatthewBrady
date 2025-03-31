@@ -24,7 +24,7 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
             _searchEngineParser = new SearchEngineParser();
         }
 
-        public SearchResultViewModel PerformSearch(SearchQueryRequest searchQueryRequest)
+        public async Task<SearchResultViewModel> PerformSearch(SearchQueryRequest searchQueryRequest)
         {
             var engine = Enum.Parse<SearchEngine>(searchQueryRequest.Engine, ignoreCase: true);
 
@@ -46,7 +46,7 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
             };
 
 
-            this._repository.Upsert(searchResults);
+            await this._repository.Upsert(searchResults);
 
             return outputList;
         }

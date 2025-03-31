@@ -24,11 +24,11 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Controllers
         [HttpPost("DoSearch")]
         [ProducesResponseType(typeof(SearchResultViewModel), StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        public ActionResult<SearchResultViewModel> DoSearch([FromBody] SearchQueryRequest request)
+        public async Task<ActionResult<SearchResultViewModel>> DoSearch([FromBody] SearchQueryRequest request)
         {
             try
             {
-                var results = this._searchApplicationService.PerformSearch(request);
+                var results = await this._searchApplicationService.PerformSearch(request);
 
                 return Ok(results);
             }
@@ -39,6 +39,68 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Controllers
                 return StatusCode(500, $"Server error: {ex.Message}");
             }
 
+        }
+
+        [HttpPost("DoBBCSearch")]
+        [ProducesResponseType(typeof(SearchResultViewModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<SearchResultViewModel>> DoBBCGoogleSearch([FromBody] SearchQueryRequest request)
+        {
+            try
+            {
+                var bbcRequest = CreateBBCGoogleSearchQueryRequest();
+                var results = await this._searchApplicationService.PerformSearch(bbcRequest);
+
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"ERROR: {ex.Message}");
+                return StatusCode(500, $"Server error: {ex.Message}");
+            }
+
+        }
+
+        [HttpPost("DoBingBBCSearch")]
+        [ProducesResponseType(typeof(SearchResultViewModel), StatusCodes.Status200OK)]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<SearchResultViewModel>> DoBBCBingSearch([FromBody] SearchQueryRequest request)
+        {
+            try
+            {
+                var bbcRequest = CreateBBCBingSearchQueryRequest();
+                var results = await this._searchApplicationService.PerformSearch(bbcRequest);
+
+                return Ok(results);
+            }
+            catch (Exception ex)
+            {
+
+                Console.WriteLine($"ERROR: {ex.Message}");
+                return StatusCode(500, $"Server error: {ex.Message}");
+            }
+
+        }
+
+        private SearchQueryRequest CreateBBCGoogleSearchQueryRequest()
+        {
+            return new SearchQueryRequest
+            {
+                Url = "https://www.bbc.com",
+                Phrase = "BBC",
+                Engine = "Google"
+            };
+        }
+
+        private SearchQueryRequest CreateBBCBingSearchQueryRequest()
+        {
+            return new SearchQueryRequest
+            {
+                Url = "https://www.bbc.com",
+                Phrase = "BBC",
+                Engine = "Bing"
+            };
         }
 
         [HttpPost("DailyHistory")]
