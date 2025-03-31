@@ -50,7 +50,17 @@ export default {
     async fetchResults() {
       this.loading = true
       try {
-        const response = await fetch('https://localhost:7197/api/search/DailyHistory')
+        const response = await fetch('https://localhost:7197/api/search/DailyHistory', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            phrase : '',
+            engine : '',
+             from : null,
+             to : null
+          })
+        });
+
         if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`)
         this.results = await response.json()
       } catch (err) {
