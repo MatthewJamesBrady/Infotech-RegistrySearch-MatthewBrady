@@ -18,8 +18,10 @@
       <div v-if="result" class="result">
         <h3>Result:</h3>
 
-        <SearchResults :results="result.results" :loading="loading" />
+        <SearchResults :result ="result" :loading="loading" />
+        
       </div>
+        <div v-if="error">{{error }}</div>
     </div>
   </section>
 </template>
@@ -33,10 +35,11 @@
     },
     data() {
       return {
-        keywords: '',
-        searchUrl: '',
+        keywords: 'bbc',
+        searchUrl: 'https://www.bbc.co.uk',
         result: null,
-        loading: false
+        loading: false,
+        error: ''
       }
     },
     methods: {
@@ -49,7 +52,7 @@
             body: JSON.stringify({
               phrase: this.keywords,
               url: this.searchUrl,
-              engine: 'google'
+              engine: 'bing'
             })
           });
 
@@ -57,7 +60,7 @@
           const data = await response.json();
           this.result = data;
         } catch (error) {
-          this.result = { error: error.message };
+          this.error =  error.message  ;
         } finally {
           this.loading = false;
         }

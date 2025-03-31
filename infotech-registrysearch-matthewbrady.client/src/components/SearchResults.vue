@@ -2,14 +2,15 @@
   <div class="results-grid">
     <div v-if="loading" class="loading">Loading...</div>
     <div v-else-if="hasResults">
-      <div class="card" v-for="(item, index) in results" :key="index">
-        <h4>{{ item.searchEngine }}</h4>
-        <p><strong>Phrase:</strong> {{ item.searchPhrase }}</p>
-        <p><strong>Count:</strong> {{ item.count }}</p>
-        <a :href="item.searchUrl" target="_blank">{{ item.searchUrl }}</a>
+      <div class="card"  >
+        <h4>{{ result.searchEngine }}</h4>
+        <p><strong>Phrase:</strong> {{ result.searchPhrase }}</p>
+        <p><strong>Count:</strong> {{ result.count }}</p>
+        <p><strong>Search Engine:</strong> {{ result.searchEngine }}</p>
+        <p><strong>Url:</strong> {{ result.url }}</p>
       </div>
     </div>
-    <div v-else class="no-results">No results found.</div>
+    <!--//<div v-else class="no-results">No results found.</div>-->
   </div>
 </template>
 
@@ -17,9 +18,9 @@
   export default {
     name: 'SearchResults',
     props: {
-      results: {
-        type: Array,
-        required: true
+      result : {
+        type: Object,
+         
       },
       loading: {
         type: Boolean,
@@ -28,7 +29,7 @@
     },
     computed: {
       hasResults() {
-        return this.results && this.results.length > 0;
+         return this.result  != null ;
       }
     }
   };
