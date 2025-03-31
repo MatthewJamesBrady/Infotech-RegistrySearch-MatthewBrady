@@ -3,8 +3,8 @@
 </script>
 
 <template>
- 
-    <Search />
+
+  <router-view />
 </template>
 <style scoped>
 header {

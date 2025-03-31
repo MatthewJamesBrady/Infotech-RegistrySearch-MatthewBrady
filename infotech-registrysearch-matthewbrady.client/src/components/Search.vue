@@ -18,10 +18,14 @@
       <div v-if="result" class="result">
         <h3>Result:</h3>
 
-        <SearchResults :result ="result" :loading="loading" />
-        
+        <SearchResults :result="result" :loading="loading" />
+
       </div>
-        <div v-if="error">{{error }}</div>
+      <div v-if="error">{{error }}</div>
+      <br />
+      <RouterLink to="/daily">Daily History</RouterLink>
+<br/>
+      <RouterLink to="/weekly">Weekly History</RouterLink>
     </div>
   </section>
 </template>
