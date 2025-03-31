@@ -45,9 +45,13 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
         {
             var weeklyHistory = await _searchTrendService.GetAllWeeklyHistory();
 
+            var orderdedHistory = weeklyHistory
+                .OrderBy(x => x.WeekStart).ThenBy(x => x.SearchEngine)
+                .ThenBy(x => x.SearchPhrase);
+
             var weeklyVms = new List<SearchWeeklyHistoryViewModel>();
 
-            foreach (var searchWeeklyHistory in weeklyHistory)
+            foreach (var searchWeeklyHistory in orderdedHistory)
             {
                 var weeklyVm = new SearchWeeklyHistoryViewModel
                 {
@@ -57,6 +61,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                     WeekStart = searchWeeklyHistory.WeekStart,
                     Count = searchWeeklyHistory.Count
                 };
+
+                weeklyVms.Add(weeklyVm);
             }
 
             return weeklyVms;

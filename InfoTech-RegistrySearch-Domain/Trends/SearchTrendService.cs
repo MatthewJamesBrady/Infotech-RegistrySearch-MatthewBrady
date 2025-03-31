@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using InfoTech_RegistrySearch_Domain.SearchOutput;
+using Microsoft.VisualBasic;
 
 namespace InfoTech_RegistrySearch_Domain.Trends
 {
@@ -38,14 +39,14 @@ namespace InfoTech_RegistrySearch_Domain.Trends
                     
                     Phrase = r.Phrase.Phrase,
                     Engine = r.SearchEngineUrl,
-                    WeekStart = r.RetirevalDate,
-                    Url = r.Url
+                    WeekStart = GetStartOfWeek(r.RetirevalDate) ,
+                    Url = r.Url.Url.AbsoluteUri
                 })
                 .Select(g => new SearchWeeklyHistory
                 {
                     SearchPhrase = g.Key.Phrase,
                     SearchEngine = g.Key.Engine,
-                    Url = g.Key.Url.Url.AbsoluteUri,
+                    Url = g.Key.Url ,
                     WeekStart = g.Key.WeekStart,
                     Count = g.Sum(x => x.Count)
                 })
@@ -54,21 +55,11 @@ namespace InfoTech_RegistrySearch_Domain.Trends
                 .ThenBy(t => t.SearchPhrase)
                 .ToList();
         }
+
+        public static DateOnly GetStartOfWeek(DateOnly date)
+        {
+            int diff = (7 + (date.DayOfWeek - DayOfWeek.Monday)) % 7;
+            return date.AddDays(-diff);
+        }
     }
-
-    public class SearchWeeklyHistory
-    {
-        public string SearchEngine { get; set; }
-
-        public string SearchPhrase { get; set; }
-
-        public string Url { get; set; }
-
-        public int Count { get; set; }
-
-        public DateOnly WeekStart { get; set; }
-
-        
-    }
-    
 }
