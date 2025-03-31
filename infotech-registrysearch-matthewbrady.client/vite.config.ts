@@ -48,7 +48,7 @@ export default defineConfig({
     server: {
         proxy: {
             '^/search': {
-                target,
+            target: 'https://localhost:7197',
                 secure: false,
 changeOrigin: true
             }

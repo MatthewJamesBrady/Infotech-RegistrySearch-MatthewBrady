@@ -22,9 +22,13 @@ builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowVueDev", policy =>
     {
-        policy.WithOrigins("http://localhost:8080")
+        //policy.WithOrigins("http://localhost:51054")
+        //    .AllowAnyHeader()
+        //    .AllowAnyMethod();
+        policy.AllowAnyOrigin()
             .AllowAnyHeader()
             .AllowAnyMethod();
+
     });
 });
 

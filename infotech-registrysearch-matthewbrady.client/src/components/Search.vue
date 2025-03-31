@@ -43,12 +43,13 @@
       async doSearch() {
         try {
           this.loading = true;
-          const response = await fetch('api/search/dosearch', {
+          const response = await fetch('https://localhost:7197/api/search/dosearch', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-              keywords: this.keywords,
-              url: this.searchUrl
+              phrase: this.keywords,
+              url: this.searchUrl,
+              engine: 'google'
             })
           });
 
