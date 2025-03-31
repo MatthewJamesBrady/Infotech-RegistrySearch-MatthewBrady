@@ -43,7 +43,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                 FormattedOutput = searchResults.ProduceFormattedOutput(),
                 SearchPhrase = searchResults.Phrase.Phrase,
                 Url = searchResults.Url.Url.AbsoluteUri,
-                Count = searchResults.Count 
+                Count = searchResults.Count ,
+                Date = DateOnly.FromDateTime(DateTime.Now) 
             };
 
 

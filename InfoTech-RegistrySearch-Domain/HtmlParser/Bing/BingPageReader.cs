@@ -30,6 +30,7 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
                 Url = query.Url,
                 Phrase = query.Phrase,
                 SearchEngineUrl = query.SearchEngine.ToString(),
+                RetirevalDate = DateOnly.FromDateTime(DateTime.Now)
             };
 
             string targetHost = query.Url.Url.Host.Replace("www.", "");

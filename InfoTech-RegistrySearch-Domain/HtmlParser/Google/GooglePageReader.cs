@@ -35,8 +35,9 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Google
             {
                 Url = query.Url,
                 Phrase = query.Phrase,
-                SearchEngineUrl = query.SearchEngine.ToString()
-            };
+                SearchEngineUrl = query.SearchEngine.ToString(),
+                RetirevalDate = DateOnly.FromDateTime(DateTime.Now)
+            }; 
 
             // Find all search result containers
             var resultBlocks = Regex.Matches(
