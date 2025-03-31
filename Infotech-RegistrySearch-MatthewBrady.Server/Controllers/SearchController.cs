@@ -1,6 +1,7 @@
 ﻿using InfoTech_RegistrySearch_Domain.SearchOutput;
 using Infotech_RegistrySearch_MatthewBrady.Server.Requests;
 using Infotech_RegistrySearch_MatthewBrady.Server.Services;
+using Infotech_RegistrySearch_MatthewBrady.Server.TestData;
 using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -15,10 +16,16 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Controllers
 
         private readonly ISearchHistoryApplicationService _searchHistoryApplicationService;
 
-        public SearchController(ISearchApplicationService searchApplicationService, ISearchHistoryApplicationService searchHistoryApplicationService)
+        private readonly SeedData _seedData;
+
+        public SearchController(
+            ISearchApplicationService searchApplicationService, 
+            ISearchHistoryApplicationService searchHistoryApplicationService, 
+            SeedData seedData)
         {
             _searchApplicationService = searchApplicationService;
             _searchHistoryApplicationService = searchHistoryApplicationService;
+            _seedData = seedData;
         }
 
         [HttpPost("DoSearch")]
@@ -132,6 +139,24 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Controllers
                 var results = await this._searchHistoryApplicationService.SearchAllWeeklyHistory();
 
                 return Ok(results);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"ERROR: {ex.Message}");
+                return StatusCode(500, $"Server error: {ex.Message}");
+            }
+
+        }
+
+        [HttpPost("GenerateHistory")]
+        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        public async Task<ActionResult<List<SearchWeeklyHistoryViewModel>>> GenerateHistory([FromBody] DailyHistoryQuery request)
+        {
+            try
+            {
+                await this._seedData.PopulateSearchHistory();
+
+                return Ok();
             }
             catch (Exception ex)
             {

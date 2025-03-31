@@ -4,6 +4,7 @@ using InfoTech_Data.SearchResultsData;
 using InfoTech_RegistrySearch_Domain.SearchOutput;
 using InfoTech_RegistrySearch_Domain.Trends;
 using Infotech_RegistrySearch_MatthewBrady.Server.Services;
+using Infotech_RegistrySearch_MatthewBrady.Server.TestData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
@@ -40,6 +41,8 @@ builder.Services.AddScoped<ISearchApplicationService, SearchApplicationService>(
 builder.Services.AddScoped<ISearchHistoryApplicationService, SearchHistoryApplicationService>();
 builder.Services.AddScoped<ISearchTrendService, SearchTrendService>();
 builder.Services.AddScoped<ISearchResultRepository, SearchResultRepository>();
+
+builder.Services.AddScoped<SeedData, SeedData>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
