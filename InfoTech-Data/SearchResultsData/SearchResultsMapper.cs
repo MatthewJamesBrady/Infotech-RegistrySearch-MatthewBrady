@@ -20,7 +20,8 @@ namespace InfoTech_Data.SearchResultsData
                 Phrase = domain.Phrase.Phrase,
                 SearchEngineUrl = domain.SearchEngineUrl,
                 Url = domain.Url.Url.AbsoluteUri,
-                Count = domain.Count
+                Count = domain.Count,
+                RetirevalDate = domain.RetirevalDate
             };
         }
 
@@ -32,6 +33,7 @@ namespace InfoTech_Data.SearchResultsData
             searchResults.Url = new SearchUrl(dto.Url);
             searchResults.Phrase = new SearchPhrase();
             searchResults.Phrase.Phrase = dto.Phrase;
+            searchResults.RetirevalDate = dto.RetirevalDate;
 
             return searchResults;
         }
