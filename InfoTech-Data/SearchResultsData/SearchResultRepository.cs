@@ -50,4 +50,23 @@ public class SearchResultRepository : ISearchResultRepository
             await _context.SaveChangesAsync();
         }
     }
+
+    public async Task Upsert(SearchResults searchResult)
+    {
+        var existing = _context.SearchResults.FirstOrDefault(sr =>
+            sr.Url == searchResult.Url.Url.AbsoluteUri &&
+            sr.Phrase == searchResult.Phrase.Phrase &&
+            sr.SearchEngineUrl == searchResult.SearchEngineUrl);
+
+        if (existing == null)
+        {
+            await this.AddAsync(searchResult);
+        }
+        else
+        {
+            await this.UpdateAsync(searchResult);
+        }
+
+        _context.SaveChanges();
+    }
 }

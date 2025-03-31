@@ -1,5 +1,6 @@
 ﻿using InfoTech_RegistrySearch_Domain.HtmlParser;
 using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTech_RegistrySearch_Domain.SearchOutput;
 using Infotech_RegistrySearch_MatthewBrady.Server.Requests;
 using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
 
@@ -9,13 +10,17 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
     {
         private readonly ISearchEngineParser _searchEngineParser;
 
-        public SearchApplicationService(ISearchEngineParser searchEngineParser)
+        private readonly ISearchResultRepository _repository;
+
+        public SearchApplicationService(ISearchEngineParser searchEngineParser, ISearchResultRepository repository)
         {
             _searchEngineParser = searchEngineParser;
+            _repository = repository;
         }
 
-        public SearchApplicationService()
+        public SearchApplicationService(ISearchResultRepository repository)
         {
+            _repository = repository;
             _searchEngineParser = new SearchEngineParser();
         }
 
@@ -40,6 +45,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                 Url = searchResults.Url.Url.AbsoluteUri
             };
 
+
+            this._repository.Upsert(searchResults);
 
             return outputList;
         }

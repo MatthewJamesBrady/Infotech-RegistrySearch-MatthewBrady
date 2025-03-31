@@ -7,4 +7,5 @@ public interface ISearchResultRepository
     Task AddAsync(SearchResults result);
     Task UpdateAsync(SearchResults result);
     Task DeleteAsync(int id);
+    Task Upsert(SearchResults searchResult);
 }
