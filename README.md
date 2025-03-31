@@ -16,6 +16,9 @@ Notes for improvement.
 
 I need clarity on what you mean by a link.  I defined it as an organic search link so I precluded ads, news, vidoes.  This did seem to align with my intuition as by setting num as say 10 in the query string i did see 10 organic results.  Also my output strings of e.g. 3, 4 matched what i counted on screen.
 
+On bing, not sure if I should include the 'main header' link.
+There is a bug where sometimes the bing page is blank.  This is probably to do with the user agent settings but I haven't confirmed.
+
 I wasn't aware Microsoft had removed Swagger in .NET 9 so I lost some time trying to figure out why it had dissappeared.  I readded it, even though I know there is a new tool for openapi but I was unfamiliar with it so I removed it for time.
 
 There is already a class by Microsoft called SearchResult hence why I called results SearchResults to avoid name clashes.

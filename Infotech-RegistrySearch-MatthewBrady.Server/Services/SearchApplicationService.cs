@@ -42,7 +42,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                 SearchEngine = searchQuery.SearchEngine.ToString(),
                 FormattedOutput = searchResults.ProduceFormattedOutput(),
                 SearchPhrase = searchResults.Phrase.Phrase,
-                Url = searchResults.Url.Url.AbsoluteUri
+                Url = searchResults.Url.Url.AbsoluteUri,
+                Count = searchResults.Count 
             };
 
 

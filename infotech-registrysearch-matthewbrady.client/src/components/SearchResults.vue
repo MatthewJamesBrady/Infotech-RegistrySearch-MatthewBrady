@@ -8,6 +8,7 @@
         <p><strong>Count:</strong> {{ result.count }}</p>
         <p><strong>Search Engine:</strong> {{ result.searchEngine }}</p>
         <p><strong>Url:</strong> {{ result.url }}</p>
+        <p><strong>Output:</strong> {{ result.formattedOutput }}</p>
       </div>
     </div>
     <!--//<div v-else class="no-results">No results found.</div>-->
