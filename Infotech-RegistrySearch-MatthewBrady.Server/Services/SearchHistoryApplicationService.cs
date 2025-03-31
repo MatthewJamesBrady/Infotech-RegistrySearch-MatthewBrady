@@ -18,8 +18,12 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
         {
             var getHistory = await _searchTrendService.GetAllHistory();
             var listOfViewModels = new List<SearchResultViewModel>();
+            var orderdVms = getHistory
+                .OrderBy(x => x.RetirevalDate)
+                .ThenBy(x => x.SearchEngineUrl )
+                .ThenBy(x => x.Phrase.Phrase);
 
-            foreach (var searchResultl in getHistory)
+            foreach (var searchResultl in orderdVms)
             {
                 var vm = new SearchResultViewModel
                 {
@@ -27,7 +31,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                     FormattedOutput = searchResultl.ProduceFormattedOutput(),
                     SearchEngine = searchResultl.SearchEngineUrl,
                     SearchPhrase = searchResultl.Phrase.Phrase,
-                    Count = searchResultl.Count
+                    Count = searchResultl.Count,
+                    Date = searchResultl.RetirevalDate
                 };
 
                 listOfViewModels.Add(vm);
@@ -49,7 +54,8 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
                     SearchEngine = searchWeeklyHistory.SearchEngine,
                     SearchPhrase = searchWeeklyHistory.SearchPhrase,
                     Url = searchWeeklyHistory.Url,
-                    WeekStart = searchWeeklyHistory.WeekStart
+                    WeekStart = searchWeeklyHistory.WeekStart,
+                    Count = searchWeeklyHistory.Count
                 };
             }
 

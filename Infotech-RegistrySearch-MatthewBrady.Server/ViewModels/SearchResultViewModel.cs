@@ -11,5 +11,6 @@
         public string FormattedOutput { get; set; }
 
         public int Count { get; set; }
+        public DateOnly Date { get; set; }
     }
 }
