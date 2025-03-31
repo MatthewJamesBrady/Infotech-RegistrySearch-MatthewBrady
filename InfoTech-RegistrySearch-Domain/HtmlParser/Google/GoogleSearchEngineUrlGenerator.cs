@@ -10,7 +10,7 @@ public class GoogleSearchEngineUrlGenerator : ISearchEngineUrlGenerator
 
     // number of results to return
     // default 100
-    public int NumberOfResults = 10;
+    public int NumberOfResults = 100;
 
         
 

@@ -25,18 +25,19 @@ public class ClientCreator
         }).Result;
 
 
-        if (searchengine == "bing")
+        if (searchengine.ToLower() == "bing")
         {
             Thread.Sleep(10 * 1000);
         }
 
-        if (searchengine == "google")
+        if (searchengine.ToLower() == "google")
         {
             Thread.Sleep(60 * 1000);
         }
        
         // Save cookies
         var storage =  context.StorageStateAsync().Result;
+        // this needs to be fixed for google
         File.WriteAllText("bing_storage.json", storage);
         //try
         //{
@@ -58,13 +59,13 @@ public class ClientCreator
 
     // Wait for search results to load
 
-    if (searchengine == "bing")
+    if (searchengine.ToLower() == "bing")
     {
         var algoresult = page.WaitForSelectorAsync("li.b_algo").Result;
     }
-    else if (searchengine == "google")
+    else if (searchengine.ToLower() == "google")
     {
-        var googleResult = page.WaitForSelectorAsync("div.g").Result;
+       // var googleResult = page.WaitForSelectorAsync("div.g").Result;
         }
         
     var content = page.ContentAsync().Result;

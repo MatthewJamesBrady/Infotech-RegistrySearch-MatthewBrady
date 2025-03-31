@@ -13,7 +13,7 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
 
         // number of results to return
         // default 100
-        public int NumberOfResults = 20;
+        public int NumberOfResults = 100;
 
         public string GenerateUrl(SearchQuery query)
         {

@@ -12,7 +12,10 @@
         <label for="searchUrl">Search URL:</label>
         <input v-model="searchUrl" id="searchUrl" type="text" />
       </div>
-
+      <div class="form-group">
+        <label for="searchEngine">Search Engine:</label>
+        <input v-model="searchEngine" id="searchEngine" type="text" />
+      </div>
       <button @click="doSearch">Search</button>
 
       <div v-if="result" class="result">
@@ -24,7 +27,7 @@
       <div v-if="error">{{error }}</div>
       <br />
       <RouterLink to="/daily">Daily History</RouterLink>
-<br/>
+      <br />
       <RouterLink to="/weekly">Weekly History</RouterLink>
     </div>
   </section>
@@ -43,6 +46,7 @@
         searchUrl: 'https://www.bbc.co.uk',
         result: null,
         loading: false,
+        searchEngine: 'bing',
         error: ''
       }
     },
@@ -56,7 +60,7 @@
             body: JSON.stringify({
               phrase: this.keywords,
               url: this.searchUrl,
-              engine: 'bing'
+              engine: this.searchEngine
             })
           });
 
