@@ -18,24 +18,24 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.TestData
         {
             var listOfSearchResults = new List<SearchResults>()
             {
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 1), 3),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 2), 0),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 3), 5),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 4), 4),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 5), 6),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 6), 7),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 7), 8),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 8), 7),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 9), 8),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 10), 9),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 11), 10),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 12), 11),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 13), 12),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 14), 15),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 15), 16),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 16), 15),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 17), 17),
-                CreateGoogleInfotechSearchResults(new DateOnly(2025, 3, 18), 20),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 1), 3),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 2), 0),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 3), 5),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 4), 4),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 5), 6),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 6), 7),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 7), 8),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 8), 7),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 9), 8),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 10), 9),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 11), 10),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 12), 11),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 13), 12),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 14), 15),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 15), 16),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 16), 15),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 17), 17),
+                CreateGoogleInfotrackSearchResults(new DateOnly(2025, 3, 18), 20),
 
             };
 
@@ -49,7 +49,7 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.TestData
             return;
         }
 
-        private SearchResults CreateGoogleInfotechSearchResults(DateOnly date, int count)
+        private SearchResults CreateGoogleInfotrackSearchResults(DateOnly date, int count)
         {
             return new SearchResults()
             {
@@ -57,7 +57,7 @@ namespace Infotech_RegistrySearch_MatthewBrady.Server.TestData
                 RetirevalDate = date,
                 Phrase = new SearchPhrase("land registry search"),
                 SearchEngineUrl = "Google",
-                Url = new SearchUrl("https://www.infotech.com")
+                Url = new SearchUrl("https://www.infotrack.com")
             };
         }
     }
