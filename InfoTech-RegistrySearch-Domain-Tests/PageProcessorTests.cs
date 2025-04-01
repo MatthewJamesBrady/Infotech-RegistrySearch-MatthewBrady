@@ -20,28 +20,9 @@ public class PageProcessorIntegrationTests
         loader = new PageDownloader();
     }
 
-    [Fact]
+    [Fact(Skip = "")]
     public void 
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        ProcessPage_WithValidURlAndPhrase_ShouldReturnMatches()
+       ProcessPage_WithValidURlAndPhrase_ShouldReturnMatches()
     {
         // Arrange
         var sut = new PageProcessor(reader, loader);

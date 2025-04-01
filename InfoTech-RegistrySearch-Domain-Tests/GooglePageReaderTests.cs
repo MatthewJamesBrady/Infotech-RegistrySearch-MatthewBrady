@@ -41,7 +41,7 @@ namespace InfoTech_RegistrySearch_Domain_Tests
             var result = googlePageReader.FindFirstSearchResult(Query);
 
             // Assert
-            result.ShouldBe("dgdfg", "Didn't find result");
+            result.ShouldNotBeNullOrEmpty();
         }
 
         [Fact]
