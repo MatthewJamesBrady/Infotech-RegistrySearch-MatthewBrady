@@ -32,8 +32,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InfoTech-Data\InfoTech-Data.csproj" />
-    <ProjectReference Include="..\infotech-registrysearch-matthewbrady.client\infotech-registrysearch-matthewbrady.client.esproj">
+    <ProjectReference Include="..\InfoTech-Data\InfoTrack-Data.csproj" />
+    <ProjectReference Include="..\infotech-registrysearch-matthewbrady.client\infoTrack-registrysearch-matthewbrady.client.esproj">
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>

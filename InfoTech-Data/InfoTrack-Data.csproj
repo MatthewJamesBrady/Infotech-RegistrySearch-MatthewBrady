@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\InfoTech-RegistrySearch-Domain\InfoTech-RegistrySearch-Domain.csproj" />
+    <ProjectReference Include="..\InfoTech-RegistrySearch-Domain\InfoTrack-RegistrySearch-Domain.csproj" />
   </ItemGroup>
 
 </Project>

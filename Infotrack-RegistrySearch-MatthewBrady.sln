@@ -3,17 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.13.35919.96
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "infotech-registrysearch-matthewbrady.client", "infotech-registrysearch-matthewbrady.client\infotech-registrysearch-matthewbrady.client.esproj", "{7F19253C-046F-F653-DDAA-242113FFD066}"
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "infoTrack-registrysearch-matthewbrady.client", "infotech-registrysearch-matthewbrady.client\infoTrack-registrysearch-matthewbrady.client.esproj", "{7F19253C-046F-F653-DDAA-242113FFD066}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infotech-RegistrySearch-MatthewBrady.Server", "Infotech-RegistrySearch-MatthewBrady.Server\Infotech-RegistrySearch-MatthewBrady.Server.csproj", "{11414051-7433-4D05-A225-9B46CFAB8122}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack-RegistrySearch-MatthewBrady.Server", "Infotech-RegistrySearch-MatthewBrady.Server\InfoTrack-RegistrySearch-MatthewBrady.Server.csproj", "{11414051-7433-4D05-A225-9B46CFAB8122}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-RegistrySearch-Domain", "InfoTech-RegistrySearch-Domain\InfoTech-RegistrySearch-Domain.csproj", "{99197900-992F-499B-915E-6A80DC63D727}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack-RegistrySearch-Domain", "InfoTech-RegistrySearch-Domain\InfoTrack-RegistrySearch-Domain.csproj", "{99197900-992F-499B-915E-6A80DC63D727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-RegistrySearch-Domain-Tests", "InfoTech-RegistrySearch-Domain-Tests\InfoTech-RegistrySearch-Domain-Tests.csproj", "{A3697744-8357-4B58-A4CC-08BD414C797D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack-RegistrySearch-Domain-Tests", "InfoTech-RegistrySearch-Domain-Tests\InfoTrack-RegistrySearch-Domain-Tests.csproj", "{A3697744-8357-4B58-A4CC-08BD414C797D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-Data", "InfoTech-Data\InfoTech-Data.csproj", "{6797276E-6961-48BD-A588-B2F014D4A516}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack-Data", "InfoTech-Data\InfoTrack-Data.csproj", "{6797276E-6961-48BD-A588-B2F014D4A516}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-Data-Tests", "InfoTech-Data-Tests\InfoTech-Data-Tests.csproj", "{D5A3EF5A-79E5-4601-9062-2581B33382DB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTrack-Data-Tests", "InfoTech-Data-Tests\InfoTrack-Data-Tests.csproj", "{D5A3EF5A-79E5-4601-9062-2581B33382DB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
