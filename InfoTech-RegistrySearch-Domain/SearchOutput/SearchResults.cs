@@ -1,8 +1,8 @@
 ﻿using System.Runtime.CompilerServices;
 using System.Text;
-using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
 
-namespace InfoTech_RegistrySearch_Domain.SearchOutput;
+namespace InfoTrack_RegistrySearch_Domain.SearchOutput;
 
 public class SearchResults
 {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser.Bing
 {
     public class BingSearchEngineUrlGenerator : ISearchEngineUrlGenerator
     {

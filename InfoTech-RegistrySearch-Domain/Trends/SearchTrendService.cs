@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 using Microsoft.VisualBasic;
 
-namespace InfoTech_RegistrySearch_Domain.Trends
+namespace InfoTrack_RegistrySearch_Domain.Trends
 {
     public interface ISearchTrendService
     {

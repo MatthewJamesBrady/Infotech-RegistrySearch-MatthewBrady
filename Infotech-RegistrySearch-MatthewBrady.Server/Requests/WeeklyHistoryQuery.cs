@@ -1,4 +1,4 @@
-﻿namespace Infotech_RegistrySearch_MatthewBrady.Server.Requests;
+﻿namespace Infotrack_RegistrySearch_MatthewBrady.Server.Requests;
 
 public class WeeklyHistoryQuery
 {

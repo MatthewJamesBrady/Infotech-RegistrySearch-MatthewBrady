@@ -1,4 +1,4 @@
-﻿namespace InfoTech_RegistrySearch_Domain.Trends;
+﻿namespace InfoTrack_RegistrySearch_Domain.Trends;
 
 public class SearchWeeklyHistory
 {

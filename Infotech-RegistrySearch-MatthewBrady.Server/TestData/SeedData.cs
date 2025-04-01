@@ -1,9 +1,9 @@
-﻿using InfoTech_Data.SearchResultsData;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿using InfoTrack_Data.SearchResultsData;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 using Microsoft.OpenApi.Services;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.TestData
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.TestData
 {
     public class SeedData
     {

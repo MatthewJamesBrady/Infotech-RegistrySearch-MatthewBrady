@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.HtmlParser;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+using InfoTrack_RegistrySearch_Domain.HtmlParser;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 
-namespace InfoTech_Data.SearchResultsData
+namespace InfoTrack_Data.SearchResultsData
 {
     internal class SearchResultsMapper
     {

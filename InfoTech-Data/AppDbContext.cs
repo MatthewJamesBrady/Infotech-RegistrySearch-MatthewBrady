@@ -1,7 +1,7 @@
-﻿using InfoTech_Data.SearchResultsData;
+﻿using InfoTrack_Data.SearchResultsData;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfoTech_Data;
+namespace InfoTrack_Data;
 
 public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
 {

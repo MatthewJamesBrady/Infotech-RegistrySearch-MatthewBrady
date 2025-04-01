@@ -1,4 +1,4 @@
-﻿namespace InfoTech_Data.SearchResultsData;
+﻿namespace InfoTrack_Data.SearchResultsData;
 
 //public interface ISearchResultRepository
 //{

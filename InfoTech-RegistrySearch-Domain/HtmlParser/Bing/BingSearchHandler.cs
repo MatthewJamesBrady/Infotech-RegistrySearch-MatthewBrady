@@ -1,8 +1,8 @@
-﻿using InfoTech_RegistrySearch_Domain.HtmlParser.Google;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿using InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing;
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser.Bing;
 
 public class BingSearchHandler : ISearchEngineHandler
 {

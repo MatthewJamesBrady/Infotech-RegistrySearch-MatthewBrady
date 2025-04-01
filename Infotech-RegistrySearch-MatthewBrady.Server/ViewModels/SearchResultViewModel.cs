@@ -1,4 +1,4 @@
-﻿namespace Infotech_RegistrySearch_MatthewBrady.Server.ViewModels
+﻿namespace Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels
 {
     public class SearchResultViewModel
     {

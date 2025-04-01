@@ -1,8 +1,8 @@
-﻿using InfoTech_RegistrySearch_Domain.SearchInput;
-using Infotech_RegistrySearch_MatthewBrady.Server.Requests;
-using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
+﻿using InfoTrack_RegistrySearch_Domain.SearchInput;
+using Infotrack_RegistrySearch_MatthewBrady.Server.Requests;
+using Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.Services;
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.Services;
 
 public interface ISearchApplicationService
 {

@@ -1,10 +1,10 @@
-﻿using InfoTech_RegistrySearch_Domain.HtmlParser;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
-using Infotech_RegistrySearch_MatthewBrady.Server.Requests;
-using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
+﻿using InfoTrack_RegistrySearch_Domain.HtmlParser;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
+using Infotrack_RegistrySearch_MatthewBrady.Server.Requests;
+using Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.Services
 {
     public class SearchApplicationService : ISearchApplicationService
     {

@@ -1,6 +1,6 @@
-﻿using InfoTech_RegistrySearch_Domain.HtmlParser;
+﻿using InfoTrack_RegistrySearch_Domain.HtmlParser;
 
-namespace InfoTech_RegistrySearch_Domain.SearchInput;
+namespace InfoTrack_RegistrySearch_Domain.SearchInput;
 
 public class SearchQuery(SearchUrl url, SearchPhrase phrase, SearchEngine searchEngine)
 {

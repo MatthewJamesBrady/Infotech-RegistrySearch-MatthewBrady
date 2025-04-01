@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser
 {
     public class HttpClientSetupFactory
     {

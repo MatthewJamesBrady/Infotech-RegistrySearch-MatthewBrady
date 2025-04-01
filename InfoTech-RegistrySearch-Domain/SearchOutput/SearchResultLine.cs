@@ -1,4 +1,4 @@
-﻿namespace InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿namespace InfoTrack_RegistrySearch_Domain.SearchOutput;
 
 public class SearchResultLine
 {

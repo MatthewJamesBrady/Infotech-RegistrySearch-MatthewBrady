@@ -1,7 +1,7 @@
-﻿using InfoTech_Data;
-using InfoTech_Data.SearchResultsData;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿using InfoTrack_Data;
+using InfoTrack_Data.SearchResultsData;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Shouldly;

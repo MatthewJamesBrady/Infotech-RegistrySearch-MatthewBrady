@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InfoTech_RegistrySearch_Domain.SearchOutput
+namespace InfoTrack_RegistrySearch_Domain.SearchOutput
 {
     public class SearchResultOutput
     {

@@ -1,4 +1,4 @@
-﻿namespace InfoTech_RegistrySearch_Domain.HtmlParser;
+﻿namespace InfoTrack_RegistrySearch_Domain.HtmlParser;
 
 public interface IPageDownloader
 {

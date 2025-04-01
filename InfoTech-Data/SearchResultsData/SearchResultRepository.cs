@@ -1,7 +1,7 @@
-﻿using InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿using InfoTrack_RegistrySearch_Domain.SearchOutput;
 using Microsoft.EntityFrameworkCore;
 
-namespace InfoTech_Data.SearchResultsData;
+namespace InfoTrack_Data.SearchResultsData;
 
 public class SearchResultRepository : ISearchResultRepository
 {

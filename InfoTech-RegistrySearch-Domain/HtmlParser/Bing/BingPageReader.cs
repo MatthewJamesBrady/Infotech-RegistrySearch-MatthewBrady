@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser.Bing
 {
     public class BingPageReader : IPageReader
     {

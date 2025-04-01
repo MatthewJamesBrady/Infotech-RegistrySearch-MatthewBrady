@@ -1,4 +1,4 @@
-﻿namespace InfoTech_RegistrySearch_Domain.SearchInput
+﻿namespace InfoTrack_RegistrySearch_Domain.SearchInput
 {
     public class SearchUrl
     {

@@ -1,7 +1,7 @@
-﻿using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+﻿using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser;
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser;
 
 public interface ISearchEngineHandler
 {

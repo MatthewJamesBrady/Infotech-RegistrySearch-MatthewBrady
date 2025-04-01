@@ -1,12 +1,12 @@
-﻿using InfoTech_RegistrySearch_Domain.SearchOutput;
-using Infotech_RegistrySearch_MatthewBrady.Server.Requests;
-using Infotech_RegistrySearch_MatthewBrady.Server.Services;
-using Infotech_RegistrySearch_MatthewBrady.Server.TestData;
-using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
+﻿using InfoTrack_RegistrySearch_Domain.SearchOutput;
+using Infotrack_RegistrySearch_MatthewBrady.Server.TestData;
+using Infotrack_RegistrySearch_MatthewBrady.Server.Requests;
+using Infotrack_RegistrySearch_MatthewBrady.Server.Services;
+using Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.Controllers
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

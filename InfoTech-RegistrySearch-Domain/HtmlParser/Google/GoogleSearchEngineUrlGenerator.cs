@@ -1,6 +1,6 @@
-﻿using InfoTech_RegistrySearch_Domain.SearchInput;
+﻿using InfoTrack_RegistrySearch_Domain.SearchInput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser.Google;
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
 
 public class GoogleSearchEngineUrlGenerator : ISearchEngineUrlGenerator
 {

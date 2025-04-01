@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.HtmlParser.Bing;
-using InfoTech_RegistrySearch_Domain.HtmlParser.Google;
-using InfoTech_RegistrySearch_Domain.SearchInput;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
+using InfoTrack_RegistrySearch_Domain.HtmlParser.Bing;
+using InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser
 {
     public interface IPageProcessor
     {

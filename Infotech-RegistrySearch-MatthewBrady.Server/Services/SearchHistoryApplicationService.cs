@@ -1,7 +1,7 @@
-﻿using InfoTech_RegistrySearch_Domain.Trends;
-using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
+﻿using InfoTrack_RegistrySearch_Domain.Trends;
+using Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.Services
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.Services
 {
     public class SearchHistoryApplicationService : ISearchHistoryApplicationService
     {

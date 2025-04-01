@@ -1,6 +1,6 @@
-﻿using Infotech_RegistrySearch_MatthewBrady.Server.ViewModels;
+﻿using Infotrack_RegistrySearch_MatthewBrady.Server.ViewModels;
 
-namespace Infotech_RegistrySearch_MatthewBrady.Server.Services;
+namespace Infotrack_RegistrySearch_MatthewBrady.Server.Services;
 
 public interface ISearchHistoryApplicationService
 {

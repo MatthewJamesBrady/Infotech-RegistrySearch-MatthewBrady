@@ -1,9 +1,9 @@
-﻿using InfoTech_RegistrySearch_Domain.HtmlParser;
+﻿using InfoTrack_RegistrySearch_Domain.HtmlParser;
 using System.Reflection;
-using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
 using Shouldly;
 using InfoTech_RegistrySearch_Domain_Tests.Helpers;
-using InfoTech_RegistrySearch_Domain.HtmlParser.Google;
+using InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
 
 namespace InfoTech_RegistrySearch_Domain_Tests
 {

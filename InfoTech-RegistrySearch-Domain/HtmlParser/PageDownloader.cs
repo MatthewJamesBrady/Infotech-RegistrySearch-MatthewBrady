@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Web;
 
-namespace InfoTech_RegistrySearch_Domain.HtmlParser
+namespace InfoTrack_RegistrySearch_Domain.HtmlParser
 {
     public class PageDownloader : IPageDownloader
     {

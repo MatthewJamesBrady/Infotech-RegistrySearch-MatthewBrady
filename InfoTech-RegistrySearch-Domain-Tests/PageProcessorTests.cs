@@ -1,7 +1,7 @@
 ﻿using InfoTech_RegistrySearch_Domain_Tests.Helpers;
-using InfoTech_RegistrySearch_Domain.HtmlParser;
-using InfoTech_RegistrySearch_Domain.HtmlParser.Google;
-using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.HtmlParser;
+using InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
 using Shouldly;
 
 namespace InfoTech_RegistrySearch_Domain_Tests;

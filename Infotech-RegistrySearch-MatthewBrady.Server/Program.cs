@@ -1,10 +1,10 @@
 using System;
-using InfoTech_Data;
-using InfoTech_Data.SearchResultsData;
-using InfoTech_RegistrySearch_Domain.SearchOutput;
-using InfoTech_RegistrySearch_Domain.Trends;
-using Infotech_RegistrySearch_MatthewBrady.Server.Services;
-using Infotech_RegistrySearch_MatthewBrady.Server.TestData;
+using InfoTrack_Data;
+using InfoTrack_Data.SearchResultsData;
+using InfoTrack_RegistrySearch_Domain.SearchOutput;
+using InfoTrack_RegistrySearch_Domain.Trends;
+using Infotrack_RegistrySearch_MatthewBrady.Server.Services;
+using Infotrack_RegistrySearch_MatthewBrady.Server.TestData;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;

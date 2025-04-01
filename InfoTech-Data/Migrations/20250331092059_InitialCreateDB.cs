@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace InfoTech_Data.Migrations
+namespace InfoTrack_Data.Migrations
 {
     /// <inheritdoc />
     public partial class InitialCreateDB : Migration

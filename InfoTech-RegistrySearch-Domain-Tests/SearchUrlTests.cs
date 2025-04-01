@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using InfoTech_RegistrySearch_Domain.HtmlParser;
-using InfoTech_RegistrySearch_Domain.HtmlParser.Google;
-using InfoTech_RegistrySearch_Domain.SearchInput;
+using InfoTrack_RegistrySearch_Domain.HtmlParser;
+using InfoTrack_RegistrySearch_Domain.HtmlParser.Google;
+using InfoTrack_RegistrySearch_Domain.SearchInput;
 using Shouldly;
 
 namespace InfoTech_RegistrySearch_Domain_Tests
