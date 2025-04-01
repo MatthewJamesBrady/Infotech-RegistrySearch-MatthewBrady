@@ -91,73 +91,7 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Google
             }
 
 
-            //// Match each Google result block
-            //var results = Regex.Matches(
-            //    loadResult,
-            //    @"<div class=""MjjYud"".*?</div>\s*</div>\s*</div>",
-            //    RegexOptions.Singleline | RegexOptions.IgnoreCase
-            //);
-
-            //string targetHost = query.Url.Url.Host.Replace("www.", ""); // e.g., "bbc.co.uk"
-
-            //for (int i = 0; i < results.Count; i++)
-            //{
-            //    string block = results[i].Value;
-
-            //    // Find the first anchor tag inside the block
-            //    var anchorMatch = Regex.Match(block, @"<a[^>]+href=\""(?<url>https?://[^\""]+)\""", RegexOptions.IgnoreCase);
-            //    if (anchorMatch.Success)
-            //    {
-            //        string url = anchorMatch.Groups["url"].Value;
-
-            //        try
-            //        {
-            //            var uri = new Uri(url);
-            //            string linkHost = uri.Host.Replace("www.", "");
-
-            //            if (linkHost == targetHost)
-            //            {
-            //                Console.WriteLine($"✅ MATCH: {url}");
-            //                searchResults.AddLineNumber(i, url);
-            //            }
-            //            else
-            //            {
-            //                Console.WriteLine($"➖ Non-match: {url}");
-            //            }
-            //        }
-            //        catch (UriFormatException)
-            //        {
-            //            Console.WriteLine($"⚠️ Skipping invalid URL: {url}");
-            //        }
-            //    }
-            //}
-
-            //MatchCollection matches = Regex.Matches(
-            //    loadResult,
-            //    @"<a[^>]+href=\""(?<url>https?://[^\""]+)\""",
-            //    RegexOptions.IgnoreCase | RegexOptions.Singleline
-            //);
-
-            //for (var index = 0; index < matches.Count; index++)
-            //{
-            //    var match = matches[index];
-
-
-
-            //    string url = match.Groups["url"].Value;
-
-            //    //Match m2 = Regex.Match(content, @"href=\""(.*?)\""", RegexOptions.Singleline);
-            //    //if (m2.Success)
-            //    //{
-
-            //    if (url.Contains(query.Url.Url.OriginalString))
-            //    {
-            //        searchResults.AddLineNumber(index, url);
-            //    }
-
-            //    //}
-
-            //}
+            
 
             return searchResults;
         }

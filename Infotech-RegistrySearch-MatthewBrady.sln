@@ -11,8 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-RegistrySearch-Dom
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-RegistrySearch-Domain-Tests", "InfoTech-RegistrySearch-Domain-Tests\InfoTech-RegistrySearch-Domain-Tests.csproj", "{A3697744-8357-4B58-A4CC-08BD414C797D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech.ApiServer", "InfoTech.ApiServer\InfoTech.ApiServer.csproj", "{55E21C66-BCD4-449E-96BC-734E4AACF4DC}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-Data", "InfoTech-Data\InfoTech-Data.csproj", "{6797276E-6961-48BD-A588-B2F014D4A516}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InfoTech-Data-Tests", "InfoTech-Data-Tests\InfoTech-Data-Tests.csproj", "{D5A3EF5A-79E5-4601-9062-2581B33382DB}"
@@ -41,10 +39,6 @@ Global
 		{A3697744-8357-4B58-A4CC-08BD414C797D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3697744-8357-4B58-A4CC-08BD414C797D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3697744-8357-4B58-A4CC-08BD414C797D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{55E21C66-BCD4-449E-96BC-734E4AACF4DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{55E21C66-BCD4-449E-96BC-734E4AACF4DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{55E21C66-BCD4-449E-96BC-734E4AACF4DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{55E21C66-BCD4-449E-96BC-734E4AACF4DC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6797276E-6961-48BD-A588-B2F014D4A516}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6797276E-6961-48BD-A588-B2F014D4A516}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6797276E-6961-48BD-A588-B2F014D4A516}.Release|Any CPU.ActiveCfg = Release|Any CPU

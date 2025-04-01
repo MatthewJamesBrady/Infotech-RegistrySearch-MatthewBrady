@@ -33,5 +33,27 @@ use entity migrations. uses the default db
 
 Run in https profile in visual studio. with the server project set as startup project.  the client app should load into a command window and you can copy the url into a new chrome window.  if the client doesnt open run 'npm run dev' in the client folder.
 
+Here's the flow below, copy the url that pops up into a new chrome window.
+
 ![Screenshot 2025-03-31 233122](Screenshot%202025-03-31%20233122.png)
+
+![Screenshot 2025-04-01 093909](Screenshot%202025-04-01%20093909.png)
+
+There's a scripted version of the db if the migrations don't work.
+
+![Screenshot 2025-04-01 094152](Screenshot%202025-04-01%20094152.png)
+
+![Screenshot 2025-04-01 094222](Screenshot%202025-04-01%20094222.png)
+
+![Screenshot 2025-04-01 094311](Screenshot%202025-04-01%20094311.png)
+
+![Screenshot 2025-04-01 094351](Screenshot%202025-04-01%20094351.png)
+
+![Screenshot 2025-04-01 094425](Screenshot%202025-04-01%20094425.png)
+
+![Screenshot 2025-04-01 094454](Screenshot%202025-04-01%20094454.png)
+
+![Screenshot 2025-04-01 094505](Screenshot%202025-04-01%20094505.png)
+
+![Screenshot 2025-04-01 094515](Screenshot%202025-04-01%20094515.png)
 

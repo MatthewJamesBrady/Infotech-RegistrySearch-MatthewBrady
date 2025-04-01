@@ -23,7 +23,6 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
         public SearchResults Read(string loadResult, SearchQuery query)
         {
             Text = loadResult;
-            //return this.FindFirstSearchResult(query);
 
             var searchResults = new SearchResults
             {
@@ -61,42 +60,22 @@ namespace InfoTech_RegistrySearch_Domain.HtmlParser.Bing
 
                         if (linkHost == targetHost)
                         {
-                            Console.WriteLine($"✅ MATCH at position {resultIndex + 1}: {url}");
+                            Console.WriteLine($"Match at position {resultIndex + 1}: {url}");
                             searchResults.AddLineNumber(resultIndex, url);
                         }
                         else
                         {
-                            Console.WriteLine($"➖ Skipped (host doesn’t match): {url}");
+                            Console.WriteLine($"Skipped (host doesn’t match): {url}");
                         }
 
                         resultIndex++; // Increment only for real organic results
                     }
                     catch (UriFormatException)
                     {
-                        Console.WriteLine($"⚠️ Invalid URL skipped: {url}");
+                        Console.WriteLine($"Invalid URL skipped: {url}");
                     }
                 }
             }
-
-            //Regex regex = new Regex(@"<li class=""b_algo"".*?<h2>\s*<a href=""(.*?)""",
-            //    RegexOptions.IgnoreCase | RegexOptions.Singleline);
-
-            //MatchCollection matches = regex.Matches(loadResult);
-
-            //// Count matching links
-            //int count = 0;
-            //for (var index = 0; index < matches.Count; index++)
-            //{
-            //    var match = matches[index];
-            //    string url = match.Groups[1].Value;
-            //    if (url.Contains(query.Url.Url.OriginalString))
-            //    {
-            //        count++;
-            //        Console.WriteLine($"Match found: {url}");
-            //        searchResults.AddLineNumber(index, match.Value);
-            //    }
-
-            //}
 
             return searchResults;
         }
